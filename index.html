@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>toggle background</title>
+</head>
+<body>
+<div class="cont-toggle">
+    <input type="checkbox"
+            id="toggle">
+    <label for="toggle">
+<!--        Dark mode toggle-->
+    </label>
+</div>
+<h1>10 JavaScript Projects in 1
+    Hour - Coding Challenge 🔥
+</h1>
+<p>Lorem ipsum dolor sit amet,
+    consectetur adipisicing elit.
+    Architecto doloremque fuga hic
+
+    iusto obcaecati optio quia totam
+    . Ab culpa cum eum fugit incidunt
+    nostrum quasi repellat sunt totam u
+    t! Architecto blanditiis eaque illo
+
+    iusto magni molestias quam quos repellen
+    dus tenetur!</p>
+<p>Lorem ipsum dolor sit amet,
+    consectetur adipisicing elit.
+    Architecto doloremque fuga hic
+
+
+    iusto magni molestias quam quos repellen
+    dus tenetur!</p>
+
+<script>
+    const toggle = document.getElementById("toggle")
+    toggle.addEventListener('change', (e) => {
+        document.body.classList.toggle("dark",
+        e.target.checked)
+    })
+
+
+
+
+
+</script>
+</body>
+</html>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        flex-direction: column;
+        font-family: "Roboto Light", monospace;
+        padding: 2rem;
+        transition: background-color 0.3s linear, color 0.3s linear;
+    }
+    body.dark {
+        background-color: #1f1f1f;
+        color: white;
+    }
+    label{
+        user-select: none;
+        cursor: pointer;
+        background-color: darkslategrey;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        display: inline-flex;
+        transition: background-color 0.3s linear;
+
+    }
+    body.dark label{
+        background-color: white;
+    }
+    .cont-toggle {
+        position: fixed;
+        top: 24px;
+        right: 24px;
+    }
+    input{
+        visibility: hidden;
+    }
+</style>
